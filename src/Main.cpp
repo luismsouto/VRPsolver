@@ -1,13 +1,7 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
+#include "Data.h"
 
 using namespace std;
-
-vector <vector <double>> distances;
-bool importData();
-bool importDistances();
 
 
 int main() {
@@ -24,15 +18,27 @@ int main() {
 
 
 bool importData() {
+	nLocations = 0;
+	if (!importDistances()) {
+		return false;
+	}
+	if (!importDrivingTimes()) {
+		return false;
+	}
+
+	return true;
+}
+
+bool importDistances() {
 	string line;
 	double val;
-	int nLines = 0, k = 1;
+	int k = 1;
 	vector <double> lineVector;
 	ifstream fileInput;
 	fileInput.open("Distances.csv");
 	while (fileInput.good()) {
 		while (getline(fileInput, line)) {
-			nLines++;
+			nLocations++;
 		}
 	}
 	fileInput.close();
@@ -42,7 +48,7 @@ bool importData() {
 			istringstream stream(line);
 			while (stream >> val) {
 				lineVector.push_back(val);
-				if (k < nLines) {
+				if (k < nLocations) {
 					++k;
 				}
 				else {
@@ -53,5 +59,45 @@ bool importData() {
 			}
 		}
 	}
-	return true;
+	fileInput.close();
+	if ((distances.size() == distances[0].size()) && distances.size() > 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
+
+bool importDrivingTimes() {
+	string line;
+	double val;
+	int k = 1;
+	vector <double> lineVector;
+	ifstream fileInput;
+	fileInput.open("Times.csv");
+
+	while (fileInput.good()) {
+		while (getline(fileInput, line, ',')) {
+			istringstream stream(line);
+			while (stream >> val) {
+				lineVector.push_back(val);
+				if (k < nLocations) {
+					++k;
+				}
+				else {
+					drivingTimes.push_back(lineVector);
+					lineVector.clear();
+					k = 1;
+				}
+			}
+		}
+	}
+	fileInput.close();
+	if ((drivingTimes.size() == drivingTimes[0].size()) && drivingTimes.size() > 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
