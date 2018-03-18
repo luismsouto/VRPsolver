@@ -6,16 +6,14 @@ using namespace std;
 
 int main() {
 	importData();
-	for (int i = 0; i < distances.size(); i++) {
-		for (int j = 0; j < distances[i].size(); j++) {
-			cout << distances[i][j] << " ";
-		}
-		cout << endl;
-	}
 	system("pause");
 	return 0;
 }
 
+
+
+#include "Data.h"
+using namespace std;
 
 bool importData() {
 	nLocations = 0;
@@ -100,4 +98,3 @@ bool importDrivingTimes() {
 		return false;
 	}
 }
-
