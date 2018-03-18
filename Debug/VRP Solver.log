@@ -1,0 +1,4 @@
+﻿  Main.cpp
+c:\users\luisf\google drive\projectos\hf-sd-vrp-mtw\vrp solver\vrp solver\main.cpp(15): warning C4018: '<': signed/unsigned mismatch
+c:\users\luisf\google drive\projectos\hf-sd-vrp-mtw\vrp solver\vrp solver\main.cpp(16): warning C4018: '<': signed/unsigned mismatch
+  VRP Solver.vcxproj -> C:\Users\luisf\Google Drive\Projectos\HF-SD-VRP-MTW\VRP Solver\Debug\VRP Solver.exe
