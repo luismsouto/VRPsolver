@@ -1,8 +1,4 @@
 ﻿  Data.cpp
   Main.cpp
   Generating Code...
-Main.obj : error LNK2005: "int nLocations" (?nLocations@@3HA) already defined in Data.obj
-Main.obj : error LNK2005: "class std::vector<class std::vector<double,class std::allocator<double> >,class std::allocator<class std::vector<double,class std::allocator<double> > > > distances" (?distances@@3V?$vector@V?$vector@NV?$allocator@N@std@@@std@@V?$allocator@V?$vector@NV?$allocator@N@std@@@std@@@2@@std@@A) already defined in Data.obj
-Main.obj : error LNK2005: "class std::vector<class std::vector<double,class std::allocator<double> >,class std::allocator<class std::vector<double,class std::allocator<double> > > > drivingTimes" (?drivingTimes@@3V?$vector@V?$vector@NV?$allocator@N@std@@@std@@V?$allocator@V?$vector@NV?$allocator@N@std@@@std@@@2@@std@@A) already defined in Data.obj
-Main.obj : error LNK2005: "class std::vector<class std::vector<double,class std::allocator<double> >,class std::allocator<class std::vector<double,class std::allocator<double> > > > aggregatedOrders" (?aggregatedOrders@@3V?$vector@V?$vector@NV?$allocator@N@std@@@std@@V?$allocator@V?$vector@NV?$allocator@N@std@@@std@@@2@@std@@A) already defined in Data.obj
-C:\Users\luisf\Google Drive\Projectos\HF-SD-VRP-MTW\VRP Solver\Debug\VRP Solver.exe : fatal error LNK1169: one or more multiply defined symbols found
+  VRP Solver.vcxproj -> C:\Users\luisf\OneDrive\Documents\Projects\VRP Solver\Debug\VRP Solver.exe
