@@ -14,7 +14,7 @@ int main() {
 	importData();
 	for (int i = 0; i < distances.size(); i++) {
 		for (int j = 0; j < distances[i].size(); j++) {
-			cout << distances[i][j] << " " ;
+			cout << distances[i][j] << " ";
 		}
 		cout << endl;
 	}
