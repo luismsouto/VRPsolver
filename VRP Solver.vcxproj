@@ -21,13 +21,13 @@
   <ItemGroup>
     <ClCompile Include="src\Data.cpp" />
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="Travel.cpp" />
-    <ClCompile Include="Vehicle.cpp" />
+    <ClCompile Include="src\Travel.cpp" />
+    <ClCompile Include="src\Vehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Data.h" />
-    <ClInclude Include="Travel.h" />
-    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="src\Travel.h" />
+    <ClInclude Include="src\Vehicle.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

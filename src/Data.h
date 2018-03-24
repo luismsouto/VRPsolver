@@ -1,20 +1,24 @@
-#ifndef DATA_H_
-#define DATA_H_
+#pragma once
 
 #include <fstream>
 #include <sstream>
 #include <string>
 #include <vector>
 
-#pragma region Global Variables
-	extern int nLocations;
-	extern std::vector <std::vector <double>> distances;
-	extern std::vector <std::vector <double>> drivingTimes;
-	extern std::vector <std::vector <double>> aggregatedOrders;
-#pragma endregion
+#include "Travel.h"
+#include "Vehicle.h"
 
-bool importData();
-bool importDistances();
-bool importDrivingTimes();
+class Data
+{
+public:
+	Data();
+	~Data();
+	bool prepareData();
+	
+private:
+	bool uploadTravel();
+	bool uploadFleet();
 
-#endif
+	Travel travel;
+	std::vector <Vehicle> fleet;
+};

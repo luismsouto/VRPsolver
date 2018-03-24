@@ -1,10 +1,10 @@
 #include <iostream>
-//#include "Data.h"
-#include "Travel.h"
+#include "Data.h"
 using namespace std;
 
 int main() {
-	//importData();
+	Data data;
+	data.prepareData();
 	system("pause");
 	return 0;
 }

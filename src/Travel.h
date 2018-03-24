@@ -4,21 +4,27 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 class Travel
 {
 public:
 	Travel();
 	~Travel();
 
-	vector <vector <double>> getAllDistances();
+	std::vector <std::vector <double>> getAllDistances();
+	std::vector <std::vector <double>> getAllDrivingTimes();
+	void setDistancesFilePath(std::string filePath);
+	void setDrivingTimesFilePath(std::string filePath);
+	bool defineNCustomers();
 	bool uploadDistances();
+	bool uploadDrivingTimes();
 	int getNCustomers();
 
 private:
-	vector <vector <double>> distances;
-	vector <vector <double>> drivingTimes;
+	std::string distancesFilePath;
+	std::string drivingTimesFilePath;
 	int nCustomers;
+	std::vector <std::vector <double>> distances;
+	std::vector <std::vector <double>> drivingTimes;
+
 };
 
