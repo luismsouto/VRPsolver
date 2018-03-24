@@ -1,9 +1,10 @@
 #include <iostream>
-#include "Data.h"
+//#include "Data.h"
+#include ""
 using namespace std;
 
 int main() {
-	importData();
+	//importData();
 	system("pause");
 	return 0;
 }
