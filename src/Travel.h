@@ -12,17 +12,11 @@ public:
 
 	std::vector <std::vector <double>> getAllDistances();
 	std::vector <std::vector <double>> getAllDrivingTimes();
-	void setDistancesFilePath(std::string filePath);
-	void setDrivingTimesFilePath(std::string filePath);
-	bool defineNCustomers();
-	bool uploadDistances();
-	bool uploadDrivingTimes();
-	int getNCustomers();
+	void addDistances(std::vector <std::vector <double>> distancesMatrix);
+	void addDrivingTimes(std::vector <std::vector <double>> drivingTimesMatrix);
 
 private:
-	std::string distancesFilePath;
-	std::string drivingTimesFilePath;
-	int nCustomers;
+
 	std::vector <std::vector <double>> distances;
 	std::vector <std::vector <double>> drivingTimes;
 
