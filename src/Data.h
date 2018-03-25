@@ -16,17 +16,21 @@ public:
 	bool prepareData();
 	void setDistancesFilePath(std::string filePath);
 	void setDrivingTimesFilePath(std::string filePath);
+	void setFleetFilePath(std::string filePath);
 	int getNCustomers();
-	bool defineNCustomers();
-	bool uploadDistances();
-	bool uploadDrivingTimes();
-	
+
 private:
 	bool uploadTravel();
 	bool uploadFleet();
 	std::string distancesFilePath;
 	std::string drivingTimesFilePath;
+	std::string fleetFilePath;
 	int nCustomers;
+	int nVehicles;
 	Travel travel;
 	std::vector <Vehicle> fleet;
+	bool defineNCustomers();
+	bool defineNVehicles();
+	bool uploadDistances();
+	bool uploadDrivingTimes();
 };
